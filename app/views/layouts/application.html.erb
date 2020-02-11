@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light">
+      <%= link_to "Wikifabinimous", articles_path, :class => "navbar-brand" %>
+      <%= link_to "New Article", new_article_path %>
+    </nav>
+
+    <div class="container">
+      <div class="row d-flex flex-column">
+        <div class="col-8 w-100 justify-content-center">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
